@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 
 // Set the Server Port
-var PORT  = process.env.PORT || 3000
+var PORT  = process.env.PORT || 8080
 
 var server = app.listen(PORT, function() {
   var host = server.address().address;
@@ -26,6 +26,6 @@ app.get('/date', function (req, res) {
 
   //Date in month-day-year format
   var todaysDate = `${month}-${day}-${year}`
-  
+
   res.send(todaysDate)
 })
