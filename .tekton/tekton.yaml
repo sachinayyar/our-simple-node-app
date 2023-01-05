@@ -1,9 +1,0 @@
-owners:
-  - "@openshift-pipelines"
-
-tasks:
-  - git-clone
-  - yaml-lint
-
-files:
-  - pipelinerun.yaml
