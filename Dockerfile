@@ -1,8 +1,6 @@
 FROM node:alpine3.10
-RUN mkdir /src
-WORKDIR /src
-COPY package.json /src
-RUN npm install
-COPY . /src
+ADD package.json /opt/app-root/src/package.json
+RUN npm install package.json
+ADD . /opt/app-root/src
 EXPOSE 8080
 CMD ["node", "server.js"]
